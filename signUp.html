@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru"> <!-- Sign Up page -->
+     <head>
+          <meta charset="utf-8">
+          <meta http-equiv="Content-Type" content="text/html">
+          <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+          <link rel="icon" href="img/icon.png">
+          <title>Innopolis Library</title>
+          <link rel="stylesheet" href="css/style.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     </head>
+
+     <body>
+          <nav>
+               <div class="container">
+                    <div class="left">
+                         <a class="logo" href="index.html">Inno<span>Lib</span></a>
+                         <a href="search_books.html">Books</a>
+                    </div>
+
+                    <div class="right">
+                         <a class="active" href="signUp.html">Sign In/Up</a>
+                    </div>
+               </div>
+          </nav>
+
+          <section class="sign-in-up">
+               <div class="container">
+                    <div class="sign-in inside">
+                         <h1>Sign In</h1>
+                         <form action="login_user.php" method="post">
+                              <div class="border">
+                                   <input type="email" name="login" class="field" placeholder="Email">
+                              </div>
+
+                              <div class="border">
+                                   <input type="password" name="password" class="field" placeholder="Password">
+                              </div>
+
+                              <input type="submit" class="button" name ="login-btn" value="Login">
+
+                              <div class="clearfix"></div>
+                         </form>
+                    </div>
+
+                    <div class="sign-up inside">
+                         <h1>Sign Up</h1>
+                         <form action="save_user.php" method="post">
+                               <div class="border">
+                                    <input type="text" name="name" class="field" placeholder="Name">
+                               </div>
+
+                               <div class="border">
+                                    <input type="text" name="address" class="field" placeholder="Address">
+                               </div>
+
+                               <div class="border">
+                                    <input type="tel" name="phone" class="field" placeholder="Phone number">
+                               </div>
+
+                              <div class="border">
+                                   <input type="email" name="login" class="field" placeholder="Email">
+                              </div>
+
+                              <div class="border">
+                                   <input type="password" name="password" class="field" placeholder="Password">
+                              </div>
+                              
+                              <div class="status">
+                                  Status: 
+                                  <select name="status" required>
+                                      <option selected value="Student">Student</option>
+                                      <option value="Professor">Professor</option>
+                                      <option value="Teaching Assistant">Teaching Assistant</option>
+                                      <option value="Instructor">Instructor</option>
+                                       <option value="Visiting Professor">Visiting Professor</option>
+                                  </select>
+                                </div>
+
+                              <input type="submit" class="button" name="input" value="Register">
+
+                              <div class="clearfix"></div>
+                         </form>
+                    </div>
+               </div>
+          </section>
+
+          <footer>
+               <div class="container">
+
+               </div>
+          </footer>
+     </body>
+</html>

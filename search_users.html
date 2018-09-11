@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru"> <!-- Searching users page -->
+     <head>
+          <meta charset="utf-8">
+          <meta http-equiv="Content-Type" content="text/html">
+          <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+          <link rel="icon" href="img/icon.png">
+          <title>Innopolis Library</title>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <link rel="stylesheet" href="css/style.css">
+          <link rel="import" href="table_users.php">
+           <script src="js/clearCookie.js"></script>
+           <script src="js/userOnline.js"></script>
+     </head>
+
+     <body>
+          <nav>
+               <div class="container">
+                    <div class="left">
+                         <a class="logo" href="index.html">Inno<span>Lib</span></a>
+                         <a href="search_books.html">Books</a>
+                         <a class = "librarian active" href="search_users.html">Patrons</a>
+                         <a class = "librarian" href="requests.html">Requests</a>
+                    </div>
+
+                    <div class="right">
+                         <a class = "hided" href="signUp.html">Sign In/Up</a>
+                         <a class = "shown" href="profile.html">Profile</a>
+                         <a class = "shown" href="index.html" onclick = "deleteCookie('userName', 'status')">Exit</a>
+                    </div>
+               </div>
+          </nav>
+          
+          <section id="foo0" class="table">
+              <script>
+                    var link = document.querySelector('link[rel=import]');
+                    var content = link.import.querySelector('#intro-dm-add-user');
+                    var parentElement = document.getElementById('foo0');
+                    var theFirstChild = parentElement.firstChild;
+                    var newElement = content.cloneNode(true);
+                    parentElement.insertBefore(newElement, theFirstChild);
+                </script>
+                <div></div>
+            </section>
+          
+
+          <section class="table">
+               <div class="container">
+                   <h2>Users</h2>
+                   <form  id = "users" action="user_edit_delete.php" method="post">
+                        <div id="foo" class="inside">
+                        <script>
+                            var link = document.querySelector('link[rel=import]');
+                            var content = link.import.querySelector('#intro-dm');
+                            var parentElement = document.getElementById('foo');
+                            var theFirstChild = parentElement.firstChild;
+                            var newElement = content.cloneNode(true);
+                            parentElement.insertBefore(newElement, theFirstChild);
+                        </script>
+                        <div></div>
+                     </div>
+                    </form>
+               </div>    
+                      
+          </section>
+
+          <footer>
+               <div class="container">
+
+               </div>
+          </footer>
+     </body>
+</html>

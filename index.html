@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru"> <!-- Welcome page -->
+     <head>
+          <meta charset="utf-8">
+          <meta http-equiv="Content-Type" content="text/html">
+          <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+          <link rel="icon" href="img/icon.png">
+          <title>Innopolis Library</title>
+          <link rel="stylesheet" href="css/style.css">
+          <script src="js/clearCookie.js"></script>
+          <script src="js/userOnline.js"></script>
+     </head>
+
+     <body>
+          <nav>
+               <div class="container">
+                    <div class="left">
+                         <a class="logo" href="index.html">Inno<span>Lib</span></a>
+                         <a href="search_books.html">Books</a>
+                         <a class = "librarian" href="search_users.html">Patrons</a>
+                         <a class = "librarian" href="requests.html">Requests</a>
+                    </div>
+
+                    <div class="right">
+                         <a class = "hided" href="signUp.html">Sign In/Up</a>
+                         <a class = "shown" href="profile.html">Profile</a>
+                         <a class = "shown" href="index.html" onclick = "deleteCookie('userName', 'status')">Exit</a>
+                    </div>
+               </div>
+          </nav>
+
+          <section class="main-info">
+               <div class="container">
+                    <div class="inside">
+
+
+
+                         <div class="info">
+                              <H1>Innopolis Library</H1>
+                              <hr>
+                              Dear visitor, welcome to the site of the Innopolis University Library! <br>
+                              Electronic Library was made to help students and teaching bodies of the University. 
+                              We have books, journal articles, audio and video materials. 
+                              Use the search to find interesting scientific and educational information on any topic. 
+                              To order a book, you need to be authorized.
+                         </div>
+
+                         <div class="clearfix"></div>
+                    </div>
+               </div>
+          </section>
+
+          <footer>
+               <div class="container">
+
+               </div>
+          </footer>
+     </body>
+</html>

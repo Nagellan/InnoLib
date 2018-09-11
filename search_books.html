@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru"> <!-- Searching book page -->
+     <head>
+          <meta charset="utf-8">
+          <meta http-equiv="Content-Type" content="text/html">
+          <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+          <link rel="icon" href="img/icon.png">
+          <title>Innopolis Library</title>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <link rel="stylesheet" href="css/style.css">
+          <link rel="import" href="table_books.php">
+          <script src="js/clearCookie.js"></script>
+          <script src="js/userOnline.js"></script>
+          <script src="js/smoothScroll.js"></script>
+          <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+          <script src="js/search.js"></script>
+     </head>
+
+     <body>
+          <nav>
+               <div class="container">
+                    <div class="left">
+                         <a class="logo" href="index.html">Inno<span>Lib</span></a>
+                         <a class="active" href="search_books.html">Books</a>
+                         <a class = "librarian" href="search_users.html">Patrons</a>
+                         <a class = "librarian" href="requests.html">Requests</a>
+                    </div>
+
+                    <div class="right">
+                         <a class = "hided" href="signUp.html">Sign In/Up</a>
+                         <a class = "shown" href="profile.html">Profile</a>
+                         <a class = "shown" href="index.html" onclick = "deleteCookie('userName', 'status')">Exit</a>
+                    </div>
+               </div>
+          </nav>
+
+          <section class="search">
+               <div class="container">
+                    <form name="search" action="search.php" method="post">
+                        <div class="inside">
+                            <input id="search-box" type="search" name="query" placeholder="Search">
+                            <button class="search-button" type="submit"><img width="30px" height="30px" src="img/search.png"></button> 
+                            <div id="results"></div>
+                        </div>
+                    </form>
+                    
+                    <div class="tags">
+                    	<div class="tag-button">  ...  </div>
+                    	<ul class="tags-list">
+                    		<a href="#books-anchor"><li>Books</li></a>
+                    		<a href="#articles-anchor"><li>Articles</li></a>
+                    		<a href="#av-files-anchor"><li>AV-files</li></a>
+                    	</ul>
+                    </div>
+                    <div class="clearfix"></div>
+               </div>
+          </section>
+          
+          <section id="foo0" class="table">
+              <script>
+                    var link = document.querySelector('link[rel=import]');
+                    var content = link.import.querySelector('#intro-dm-add-book');
+                    var parentElement = document.getElementById('foo0');
+                    var theFirstChild = parentElement.firstChild;
+                    var newElement = content.cloneNode(true);
+                    parentElement.insertBefore(newElement, theFirstChild);
+                </script>
+                <div></div>
+            </section>
+
+          <section class="table">
+               <div class="container">
+                   <div id="books-anchor" class="anchor"></div>
+                   <h2>Books</h2>
+                   <form  id = "books" action="book_edit_delete.php" method="post">
+                        <div id="foo" class="inside">
+                            <script>
+                                var link = document.querySelector('link[rel=import]');
+                                var content = link.import.querySelector('#intro-dm-books');
+                                var parentElement = document.getElementById('foo');
+                                var theFirstChild = parentElement.firstChild;
+                                var newElement = content.cloneNode(true);
+                                parentElement.insertBefore(newElement, theFirstChild);
+                            </script>
+                            <div></div>
+                        </div>
+                    </form>
+               </div>
+          </section>
+
+          <section class="table">
+               <div class="container">
+                   <div id="articles-anchor" class="anchor"></div>
+                   <h2>Articles</h2>
+                   <form id="articles" action="book_edit_delete.php" method="post">
+                    <div id="foo1" class="inside">
+                        <script>
+                            var link = document.querySelector('link[rel=import]');
+                            var content = link.import.querySelector('#intro-dm-articles');
+                            var parentElement = document.getElementById('foo1');
+                            var theFirstChild = parentElement.firstChild;
+                            var newElement = content.cloneNode(true);
+                            parentElement.insertBefore(newElement, theFirstChild);
+                        </script>
+                        <div></div>
+                    </div>
+                    </form>
+               </div>
+          </section>
+          
+          <section class="table">
+               <div class="container">
+                   <div id="av-files-anchor" class="anchor"></div>
+                   <h2>AV-files</h2>
+                   <form id = "av-files" action="book_edit_delete.php" method="post">
+                    <div id="foo2" class="inside">
+                        <script>
+                            var link = document.querySelector('link[rel=import]');
+                            var content = link.import.querySelector('#intro-dm-avfiles');
+                            var parentElement = document.getElementById('foo2');
+                            var theFirstChild = parentElement.firstChild;
+                            var newElement = content.cloneNode(true);
+                            parentElement.insertBefore(newElement, theFirstChild);
+                        </script>
+                        <div></div>
+                    </div>
+                    </form>
+               </div>
+          </section>    
+          
+          <footer>
+               <div class="container">
+
+               </div>
+          </footer>
+     </body>
+</html>

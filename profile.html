@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru"> <!-- Profile page -->
+     <head>
+          <meta charset="utf-8">
+          <meta http-equiv="Content-Type" content="text/html">
+          <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+          <link rel="icon" href="img/icon.png">
+          <title>Innopolis Library</title>
+          <link rel="stylesheet" href="css/style.css">
+          <link rel="import" href="user_info.php">
+
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script src="js/clearCookie.js"></script>
+          <script src="js/userOnline.js"></script>
+          <script src="js/show_hide.js"></script>
+     </head>
+
+     <body>
+          <nav>
+               <div class="container">
+                    <div class="left">
+                         <a class="logo" href="index.html">Inno<span>Lib</span></a>
+                         <a href="search_books.html">Books</a>
+                         <a class = "librarian" href="search_users.html">Patrons</a>
+                         <a class = "librarian" href="requests.html">Requests</a>
+                    </div>
+
+                    <div class="right">
+                         <a class="active" href="signUp.html">Profile</a>
+                         <a href="index.html" onclick="deleteCookie('userName', 'status')">Exit</a>
+                    </div>
+               </div>
+          </nav>
+
+          <section class="profile">
+               <div class="container">
+                    <div class="inside">
+                         <div class="left">
+                              <div id="foo1" class="inside">
+                                   <script>
+                                        var link = document.querySelector('link[rel=import]');
+                                        var content = link.import.querySelector('#intro-dm-img');
+                                        var parentElement = document.getElementById('foo1');
+                                        var theFirstChild = parentElement.firstChild;
+                                        var newElement = content.cloneNode(true);
+                                        parentElement.insertBefore(newElement, theFirstChild);
+                                    </script>
+                                    <div></div>
+                              </div>
+                              
+                              <style type="text/css">[class|="dsspoiler"]{display:none;}</style>
+                             
+                              <input class="button" onclick="$('.dsspoiler-4').toggle();return false;" type="button" id="hide" value="List of books">
+                             <form action="return.php" method="post">
+                                  <div id="foo2" class="inside dsspoiler-4 hided">
+                                    <script>
+                                        var link = document.querySelector('link[rel=import]');
+                                        var content = link.import.querySelector('#intro-dm-books');
+                                        var parentElement = document.getElementById('foo2');
+                                        var theFirstChild = parentElement.firstChild;
+                                        var newElement = content.cloneNode(true);
+                                        parentElement.insertBefore(newElement, theFirstChild);
+                                    </script>
+                                    <div></div>
+                                </div>
+                            </form>
+                         </div>
+
+                         <div class="right">
+                              <div id="foo" class="inside">
+                                   <script>
+                                        var link = document.querySelector('link[rel=import]');
+                                        var content = link.import.querySelector('#intro-dm');
+                                        var parentElement = document.getElementById('foo');
+                                        var theFirstChild = parentElement.firstChild;
+                                        var newElement = content.cloneNode(true);
+                                        parentElement.insertBefore(newElement, theFirstChild);
+                                    </script>
+                                    <div></div>
+                              </div>
+                         </div>
+                         <div class="clearfix"></div>
+                    </div>
+               </div>
+          </section>
+
+          <footer>
+               <div class="container">
+
+               </div>
+          </footer>
+     </body>
+</html>
