@@ -1,9 +1,10 @@
 # InnoLib
 Site for Innopolis Library System.
 Made as a course project for Introduction to Programming II subject in Innopolis University, 2nd semester. 
-* Here is the [link](http://y98722gq.beget.tech/index.html) to the working site on a hosting service.
 
 **Team:** [Irek Nazmiev](https://github.com/Nagellan), [Mikhail Moiseev](https://github.com/lackadaisicalcynic), [Lera Vertash](https://github.com/vvertash)
+
+* Here is a [link](http://y98722gq.beget.tech/index.html) to the working site on a hosting service.
 
 ### Assigned task
 Task is to make a library system. The system contains all information about books, magazines, audio/video materials, as well as people allowed to check out the materials. Library enables users to search for and check out documents. Types of users: student, teaching assistant, instructor, professor, visiting professor, librarian (with privileges 1, 2 or 3) and admin. Librarians can enter new materials, manage users of the library. Admin can manage librarians (add, delete or modify information about them), assign their privileges and see a list of logs (all the actions executed by each user of the library).
